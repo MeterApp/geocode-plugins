@@ -1,0 +1,18 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "geocode",
+  "owner": {
+    "name": "Meter",
+    "email": "jonathan@welcome.meterapp.co",
+    "url": "https://meterapp.co"
+  },
+  "description": "Geocode AI by Meter: administrative boundaries and natural-language areas for agents.",
+  "plugins": [
+    {
+      "name": "geocode",
+      "source": "./",
+      "description": "Three skills plus the hosted MCP server: look up boundaries by name or point, get polygons as GeoJSON, list children, test points, merge shapes, and turn a plain-language description into one validated polygon.",
+      "category": "development"
+    }
+  ]
+}

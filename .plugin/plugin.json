@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "geocode",
+  "version": "0.1.0",
+  "description": "Administrative boundaries and areas for any place on Earth: look up a country, state, county, city, district or postcode by name or point and get its polygon, list what is inside it, test points against it, merge several, or describe an area in plain language and get one validated polygon back.",
+  "author": {
+    "name": "Meter",
+    "email": "jonathan@welcome.meterapp.co",
+    "url": "https://meterapp.co"
+  },
+  "homepage": "https://geo-coder-service.vercel.app/llms.txt",
+  "repository": "https://github.com/MeterApp/geocode-plugins",
+  "license": "MIT",
+  "keywords": [
+    "geocoding",
+    "boundaries",
+    "polygons",
+    "geojson",
+    "openstreetmap",
+    "gis",
+    "maps",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Geocode AI",
+        "category": "Developer Tools",
+        "privacyPolicyURL": "https://geo-coder-service.vercel.app/privacy"
+      }
+    }
+  }
+}

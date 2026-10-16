@@ -1,0 +1,6 @@
+interface:
+  display_name: "Geocode API"
+  short_description: "Write code against the Geocode AI API"
+  default_prompt: "Use $geocode-api to write a TypeScript function that returns the county for a latitude and longitude."
+policy:
+  allow_implicit_invocation: true

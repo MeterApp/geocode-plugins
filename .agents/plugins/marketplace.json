@@ -1,0 +1,20 @@
+{
+  "name": "geocode",
+  "interface": {
+    "displayName": "Geocode AI"
+  },
+  "plugins": [
+    {
+      "name": "geocode",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

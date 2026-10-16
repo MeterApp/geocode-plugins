@@ -1,0 +1,47 @@
+{
+  "name": "geocode",
+  "version": "0.1.0",
+  "description": "Administrative boundaries and areas for any place on Earth: look up a country, state, county, city, district or postcode by name or point and get its polygon, list what is inside it, test points against it, merge several, or describe an area in plain language and get one validated polygon back.",
+  "author": {
+    "name": "Meter",
+    "email": "jonathan@welcome.meterapp.co",
+    "url": "https://meterapp.co"
+  },
+  "homepage": "https://geo-coder-service.vercel.app/llms.txt",
+  "repository": "https://github.com/MeterApp/geocode-plugins",
+  "license": "MIT",
+  "keywords": [
+    "geocoding",
+    "boundaries",
+    "polygons",
+    "geojson",
+    "openstreetmap",
+    "gis",
+    "maps",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Geocode AI",
+    "shortDescription": "Boundaries and areas as polygons",
+    "longDescription": "Look up any administrative boundary in the world by name or coordinate and get its polygon as GeoJSON; browse what is inside a boundary, check which zone each point falls in, merge several boundaries into one shape, or describe an area in plain language (even a clause from a contract) and get one validated polygon back.",
+    "developerName": "Meter",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://geo-coder-service.vercel.app",
+    "defaultPrompt": [
+      "Get the boundary of Alameda County as GeoJSON.",
+      "Which city and county is 37.8, -122.27 in?",
+      "Make one polygon for the Bay Area counties, excluding San Francisco."
+    ],
+    "brandColor": "#14857A",
+    "composerIcon": "./assets/logo.svg",
+    "logo": "./assets/logo.svg",
+    "supportURL": "https://geo-coder-service.vercel.app/llms.txt",
+    "privacyPolicyURL": "https://geo-coder-service.vercel.app/privacy"
+  }
+}

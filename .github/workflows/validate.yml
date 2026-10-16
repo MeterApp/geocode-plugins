@@ -1,0 +1,35 @@
+name: Validate plugin
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 14 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - name: Structure
+        run: node scripts/validate.mjs
+      - name: Claude Code accepts the manifests
+        run: |
+          npm install --global @anthropic-ai/claude-code
+          claude plugin validate .
+      - name: Codex lists the plugin
+        run: |
+          npm install --global @openai/codex
+          export CODEX_HOME="$(mktemp -d)"
+          codex plugin marketplace add .
+          codex plugin list --available --json | tee /tmp/codex.json
+          grep -q 'geocode' /tmp/codex.json

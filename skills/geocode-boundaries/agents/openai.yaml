@@ -1,0 +1,6 @@
+interface:
+  display_name: "Geocode Boundaries"
+  short_description: "Find boundaries and get their polygons"
+  default_prompt: "Use $geocode-boundaries to get the boundary of Alameda County, California as GeoJSON."
+policy:
+  allow_implicit_invocation: true
