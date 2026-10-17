@@ -2,18 +2,18 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "geocode",
   "displayName": "Geocode AI",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Administrative boundaries and areas for any place on Earth: look up a country, state, county, city, district or postcode by name or point and get its polygon, list what is inside it, test points against it, merge several, or describe an area in plain language and get one validated polygon back.",
   "author": {
     "name": "Meter",
     "email": "jonathan@welcome.meterapp.co",
     "url": "https://meterapp.co"
   },
-  "homepage": "https://geo-coder-service.vercel.app/llms.txt",
+  "homepage": "https://geocodeai.dev/llms.txt",
   "repository": "https://github.com/MeterApp/geocode-plugins",
   "license": "MIT",
-  "privacyPolicyUrl": "https://geo-coder-service.vercel.app/privacy",
-  "supportUrl": "https://geo-coder-service.vercel.app/llms.txt",
+  "privacyPolicyUrl": "https://geocodeai.dev/privacy",
+  "supportUrl": "https://geocodeai.dev/llms.txt",
   "keywords": [
     "geocoding",
     "boundaries",
@@ -28,7 +28,7 @@
     "api_key": {
       "type": "string",
       "title": "Geocode AI API key (optional)",
-      "description": "Leave empty to sign in with your browser the first time a tool runs. Or paste a geo_… key from https://geo-coder-service.vercel.app/dashboard (or `npx @meterapp/geocode login`) for a machine without a browser: Claude Code keeps it in your system's credential store and sends it only to the Geocode MCP server, in the X-Api-Key header.",
+      "description": "Leave empty to sign in with your browser the first time a tool runs. Or paste a geo_… key from https://geocodeai.dev/dashboard (or `npx @meterapp/geocode login`) for a machine without a browser: Claude Code keeps it in your system's credential store and sends it only to the Geocode MCP server, in the X-Api-Key header.",
       "sensitive": true,
       "default": ""
     }
@@ -36,7 +36,7 @@
   "mcpServers": {
     "geocode": {
       "type": "http",
-      "url": "https://geo-coder-service.vercel.app/mcp?auth=required",
+      "url": "https://geocodeai.dev/mcp?auth=required",
       "headers": {
         "X-Geocode-Integration": "plugin",
         "X-Api-Key": "${user_config.api_key}"

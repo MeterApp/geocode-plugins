@@ -5,7 +5,7 @@ description: Write code that calls the Geocode AI API - REST (fetch, curl, Pytho
 
 # Geocode AI from code
 
-Base URL: `https://geo-coder-service.vercel.app` (read `GEOCODE_BASE_URL` in
+Base URL: `https://geocodeai.dev` (read `GEOCODE_BASE_URL` in
 your code so it can change). Machine-readable references, always current:
 
 - `GET /v1`: every op with its input JSON Schema, cost and routes.
@@ -30,7 +30,7 @@ Every op has two equivalent routes with the same input:
 
 ```ts
 async function geocode<T>(op: string, input: object): Promise<T> {
-  const res = await fetch(`${process.env.GEOCODE_BASE_URL ?? "https://geo-coder-service.vercel.app"}/v1/ops/${op}`, {
+  const res = await fetch(`${process.env.GEOCODE_BASE_URL ?? "https://geocodeai.dev"}/v1/ops/${op}`, {
     method: "POST",
     headers: { Authorization: `Bearer ${process.env.GEOCODE_API_KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify(input),
@@ -47,7 +47,7 @@ async function geocode<T>(op: string, input: object): Promise<T> {
 
 Errors are `application/problem+json` with `code`, `detail` and `request_id`:
 400 `invalid_input` (with `issues`), 401 `unauthorized`/`invalid_key`, 402
-`quota_exceeded`, 404 `not_found`, 422 `could_not_map` (areas), 429
+`quota_exceeded` (the geocode-billing skill covers upgrading), 404 `not_found`, 422 `could_not_map` (areas), 429
 `rate_limited` (wait `retry_after` seconds). Responses carry `RateLimit-Limit`,
 `RateLimit-Remaining` and `RateLimit-Reset`; back off on 429 instead of
 retrying hot. Retry 5xx once with jitter; never retry 4xx unchanged.
@@ -73,6 +73,17 @@ Exit codes: 2 usage, 3 auth, 4 quota or rate limit, 1 anything else. For a
 tool that signs a person in, use the device flow the CLI uses:
 `POST /v1/auth/device`, have them open `verification_uri_complete`, then poll
 `POST /v1/auth/device/token` every `interval` seconds until it returns the key.
+
+## Feature requests and issue reports
+
+The feedback board is part of the API, so an app or agent can file from where
+the problem happens. `GET /v1/feedback` (public; `kind`, `status`, `sort`,
+`q`) lists requests and issues by upvotes; `POST /v1/feedback/features` and
+`POST /v1/feedback/issues` file one (`title`, `details`; issues also take the
+failing call's `request_id` and `op`); `POST`/`DELETE /v1/feedback/{id}/vote`
+upvotes or takes it back; `POST /v1/feedback/{id}/comments` adds context.
+Writes need a key and are free. Search before filing, and never put keys or
+personal data in the public text.
 
 ## MCP from an agent
 

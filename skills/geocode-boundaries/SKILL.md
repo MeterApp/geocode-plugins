@@ -54,6 +54,16 @@ and tell the human; never upgrade a plan for them.
 - If no result matches, say so and show the closest candidates. Never
   substitute a different place silently.
 
+## When the API falls short
+
+If the human needs something the tools cannot do, or a call fails in a way
+that looks like our bug (a 5xx, a boundary that is wrong or missing), use the
+public feedback board. `list_feedback` first; if a matching item exists,
+`upvote_feedback` it and add the use case with `comment_on_feedback`.
+Otherwise, with the human's go-ahead, `request_feature` or `report_issue`
+(pass the failing call's `request_id` and `op`). All free; the board is
+public, so never include keys, personal or customer data.
+
 ## CLI equivalents
 
 ```bash
@@ -61,4 +71,8 @@ npx @meterapp/geocode search "Alameda County"
 npx @meterapp/geocode get r396499 --format geojson > alameda.geojson
 npx @meterapp/geocode reverse 37.8 -122.27
 npx @meterapp/geocode children r396499
+npx @meterapp/geocode feedback --kind feature --q postcode
+npx @meterapp/geocode upvote 12
+npx @meterapp/geocode request "Export as Shapefile" --details "ArcGIS import"
+npx @meterapp/geocode report "get_boundary 500 for r62422" --request-id req_… --op get_boundary
 ```

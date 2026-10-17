@@ -1,13 +1,13 @@
 {
   "name": "geocode",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Administrative boundaries and areas for any place on Earth: look up a country, state, county, city, district or postcode by name or point and get its polygon, list what is inside it, test points against it, merge several, or describe an area in plain language and get one validated polygon back.",
   "author": {
     "name": "Meter",
     "email": "jonathan@welcome.meterapp.co",
     "url": "https://meterapp.co"
   },
-  "homepage": "https://geo-coder-service.vercel.app/llms.txt",
+  "homepage": "https://geocodeai.dev/llms.txt",
   "repository": "https://github.com/MeterApp/geocode-plugins",
   "license": "MIT",
   "keywords": [
@@ -32,7 +32,7 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://geo-coder-service.vercel.app",
+    "websiteURL": "https://geocodeai.dev",
     "defaultPrompt": [
       "Get the boundary of Alameda County as GeoJSON.",
       "Which city and county is 37.8, -122.27 in?",
@@ -41,7 +41,7 @@
     "brandColor": "#14857A",
     "composerIcon": "./assets/logo.svg",
     "logo": "./assets/logo.svg",
-    "supportURL": "https://geo-coder-service.vercel.app/llms.txt",
-    "privacyPolicyURL": "https://geo-coder-service.vercel.app/privacy"
+    "supportURL": "https://geocodeai.dev/llms.txt",
+    "privacyPolicyURL": "https://geocodeai.dev/privacy"
   }
 }

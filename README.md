@@ -26,7 +26,7 @@ codex plugin add geocode@geocode
 ```
 
 **Cursor and others**: point the MCP config at
-`https://geo-coder-service.vercel.app/mcp?auth=required`, or run
+`https://geocodeai.dev/mcp?auth=required`, or run
 `npx @meterapp/geocode install` to configure Claude Code, Codex and Cursor at once.
 
 ## What is inside
@@ -36,10 +36,11 @@ codex plugin add geocode@geocode
 | `geocode-boundaries` | Find boundaries, get polygons, reverse lookups, children, contains, union |
 | `geocode-areas` | A polygon from a plain-language description or a contract clause |
 | `geocode-api` | Writing code against the REST API, the CLI or MCP |
+| `geocode-billing` | Prices, your plan and usage, checkout and billing-portal links to upgrade or manage it |
 
 Plus the hosted MCP server (`.mcp.json`), whose tools are the API's ops.
 
-Docs for agents: https://geo-coder-service.vercel.app/llms.txt
+Docs for agents: https://geocodeai.dev/llms.txt
 
 This repository is generated from the Geocode AI source; pull requests here are
 overwritten on the next release, so please open an issue instead.

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Geocode Billing"
+  short_description: "Plans, prices, checkout and billing links for Geocode AI"
+  default_prompt: "Use $geocode-billing to show me the Geocode AI plans and get me a checkout link for Pro."
+policy:
+  allow_implicit_invocation: true

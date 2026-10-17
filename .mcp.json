@@ -2,7 +2,7 @@
   "mcpServers": {
     "geocode": {
       "type": "http",
-      "url": "https://geo-coder-service.vercel.app/mcp?auth=required",
+      "url": "https://geocodeai.dev/mcp?auth=required",
       "headers": {
         "X-Geocode-Integration": "plugin"
       }
