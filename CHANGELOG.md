@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.1
+
+- `geocode-billing`: yearly plans (`yearly: true`, `--yearly`): ten months' price,
+  two months free.
+
 ## 0.3.0
 
 - `geocode-billing`: `get_pricing` now returns the shared pricing document

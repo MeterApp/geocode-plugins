@@ -35,7 +35,9 @@ Only when the human asked to buy or upgrade (a 402 alone is not consent):
 From a terminal: `npx @meterapp/geocode upgrade --plan pro` opens the same
 Checkout (prints JSON with the `url` when not in a terminal; works without a
 key). `geocode pricing` and `geocode account` print the plans and the account.
-Plans are monthly only: `yearly` answers `interval_unavailable`.
+Yearly billing: add `"yearly": true` (CLI `--yearly`) for ten months' price
+once a year (two months free); `get_pricing` shows `price.yearly` and
+`checkout_url_yearly`. Monthly is the default; say which one you are sending.
 
 ## Managing a plan
 

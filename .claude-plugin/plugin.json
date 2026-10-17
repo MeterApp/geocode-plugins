@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "geocode",
   "displayName": "Geocode AI",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Administrative boundaries and areas for any place on Earth: look up a country, state, county, city, district or postcode by name or point and get its polygon, list what is inside it, test points against it, merge several, or describe an area in plain language and get one validated polygon back.",
   "author": {
     "name": "Meter",
