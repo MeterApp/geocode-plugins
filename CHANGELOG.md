@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.5.0
+
+- `geocode-teams` skill: accounts are organizations with roles (viewer, member,
+  admin, owner) and teams. `get_account` names the organization and your role;
+  `list_orgs`, `list_members` and `list_teams` read who is in it; `save_file`,
+  `list_files`, `get_file` and `share_file` keep boundary exports in the
+  organization's shared library and share them with a team or a person.
+  Inviting and roles stay on the dashboard.
+
+## 0.4.0
+
+- `geocode-feedback` skill: report a bug with the failing call's `request_id`
+  attached (`report_issue`, private to you and the team), request features,
+  upvote and comment, follow up with `list_my_feedback`, and read or post
+  reviews (`list_reviews`, `submit_review`). Filing returns `similar` items
+  first so agents upvote instead of duplicating.
+
 ## 0.3.1
 
 - `geocode-billing`: yearly plans (`yearly: true`, `--yearly`): ten months' price,

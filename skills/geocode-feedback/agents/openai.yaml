@@ -1,0 +1,6 @@
+interface:
+  display_name: "Geocode Feedback"
+  short_description: "Report bugs with the failing request, request features, vote and review Geocode AI"
+  default_prompt: "Use $geocode-feedback to report the failed Geocode AI call above with its request id."
+policy:
+  allow_implicit_invocation: true

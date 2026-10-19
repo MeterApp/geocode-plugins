@@ -1,5 +1,7 @@
 # Geocode AI plugin
 
+**Website: [geocodeai.dev](https://geocodeai.dev/?ref=plugin)**
+
 Administrative boundaries and areas for Claude Code, Codex, Cursor and any
 agent that reads Agent Skills: look up a country, state, county, city, district
 or postcode by name or point and get its polygon, list what is inside it, test
@@ -37,6 +39,8 @@ codex plugin add geocode@geocode
 | `geocode-areas` | A polygon from a plain-language description or a contract clause |
 | `geocode-api` | Writing code against the REST API, the CLI or MCP |
 | `geocode-billing` | Prices, your plan and usage, checkout and billing-portal links to upgrade or manage it |
+| `geocode-feedback` | Report bugs with the failing request attached, request features, upvote, follow up, and read or post reviews |
+| `geocode-teams` | Your organization, its members and teams, and the shared file library: save a boundary export and share it with a team |
 
 Plus the hosted MCP server (`.mcp.json`), whose tools are the API's ops.
 

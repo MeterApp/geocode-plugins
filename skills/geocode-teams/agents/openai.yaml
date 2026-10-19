@@ -1,0 +1,6 @@
+interface:
+  display_name: "Geocode Teams"
+  short_description: "Organizations, teams and the shared boundary file library"
+  default_prompt: "Use $geocode-teams to save the boundary of Berlin to our file library and share it with the GIS team."
+policy:
+  allow_implicit_invocation: true

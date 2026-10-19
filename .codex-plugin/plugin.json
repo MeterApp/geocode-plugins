@@ -1,10 +1,10 @@
 {
   "name": "geocode",
-  "version": "0.3.1",
+  "version": "0.5.0",
   "description": "Administrative boundaries and areas for any place on Earth: look up a country, state, county, city, district or postcode by name or point and get its polygon, list what is inside it, test points against it, merge several, or describe an area in plain language and get one validated polygon back.",
   "author": {
     "name": "Meter",
-    "email": "jonathan@welcome.meterapp.co",
+    "email": "jonathan@geocodeai.dev",
     "url": "https://meterapp.co"
   },
   "homepage": "https://geocodeai.dev/llms.txt",
