@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.1
+
+- Listing icon (`.claude-plugin/icon.png`, 1024×1024, rendered from
+  `assets/logo.svg`) and a terms of service link in the Claude Code manifest.
+- README: one-step install
+  (`/plugin install geocode --marketplace MeterApp/geocode-plugins`) and what
+  the plugin sends and fetches.
+
 ## 0.5.0
 
 - `geocode-teams` skill: accounts are organizations with roles (viewer, member,

@@ -11,7 +11,7 @@
     {
       "name": "geocode",
       "source": "./",
-      "description": "Three skills plus the hosted MCP server: look up boundaries by name or point, get polygons as GeoJSON, list children, test points, merge shapes, and turn a plain-language description into one validated polygon.",
+      "description": "Six skills plus the hosted MCP server: look up boundaries by name or point, get polygons as GeoJSON, list children, test points, merge shapes, and turn a plain-language description into one validated polygon.",
       "category": "development"
     }
   ]
