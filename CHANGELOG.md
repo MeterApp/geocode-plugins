@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.3
+
+- The MCP server URL is `https://geocodeai.dev/mcp/account`, which always asks
+  for sign-in, instead of the `X-Geocode-Auth` header: the Claude directory's
+  scan read that header as a shipped credential too.
+
 ## 0.5.2
 
 - The MCP server URL is plain `https://geocodeai.dev/mcp`; the plugin asks for

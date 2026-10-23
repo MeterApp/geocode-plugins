@@ -28,7 +28,7 @@ if (versions.size !== 1) problems.push(`manifest versions differ: ${[...versions
 for (const m of manifests) if (parsed[m] && parsed[m].name !== "geocode") problems.push(`${m}: name must be "geocode"`);
 
 const urls = new Set([parsed[".mcp.json"]?.mcpServers?.geocode?.url, parsed[".claude-plugin/plugin.json"]?.mcpServers?.geocode?.url]);
-if (urls.size !== 1 || [...urls].some((u) => !/^https:\/\/[^/]+\/mcp(\?|$)/.test(u ?? ""))) problems.push(`MCP urls must match and end in /mcp: ${[...urls].join(", ")}`);
+if (urls.size !== 1 || [...urls].some((u) => !/^https:\/\/[^/]+\/mcp(\/account)?(\?|$)/.test(u ?? ""))) problems.push(`MCP urls must match and end in /mcp or /mcp/account: ${[...urls].join(", ")}`);
 if (parsed[".claude-plugin/marketplace.json"]?.plugins?.[0]?.name !== "geocode") problems.push("marketplace.json must list geocode");
 
 // The Claude directory listing icon: a square PNG, 512–2048 px, under 2 MB.
