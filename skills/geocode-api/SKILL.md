@@ -5,8 +5,8 @@ description: Write code that calls the Geocode AI API - REST (fetch, curl, Pytho
 
 # Geocode AI from code
 
-Base URL: `https://geocodeai.dev` (read `GEOCODE_BASE_URL` in
-your code so it can change). Machine-readable references, always current:
+Base URL: `https://geocodeai.dev` (make it a setting in your app so it can
+change). Machine-readable references, always current:
 
 - `GET /v1`: every op with its input JSON Schema, cost and routes.
 - `/openapi.json`: OpenAPI 3.1 (generate a client from it).
@@ -15,9 +15,10 @@ your code so it can change). Machine-readable references, always current:
 ## Auth
 
 `Authorization: Bearer geo_…` (or `X-Api-Key: geo_…`). Create keys in the
-dashboard or with `npx @meterapp/geocode keys create <name>`. Keep keys in an
-environment variable (`GEOCODE_API_KEY`) on the server; never ship one to a
-browser or commit it. Public ops work without a key at a low per-IP rate.
+dashboard or with `npx @meterapp/geocode keys create <name>`. A key is a
+server-side secret of the app you are writing: load it from that app's secret
+store or config and pass it in, as below; never ship one to a browser or commit
+it. Public ops work without a key at a low per-IP rate.
 
 ## Routes
 
@@ -29,10 +30,12 @@ Every op has two equivalent routes with the same input:
   generate: one function for every op.
 
 ```ts
-async function geocode<T>(op: string, input: object): Promise<T> {
-  const res = await fetch(`${process.env.GEOCODE_BASE_URL ?? "https://geocodeai.dev"}/v1/ops/${op}`, {
+type GeocodeClient = { apiKey: string; baseUrl?: string };
+
+async function geocode<T>(client: GeocodeClient, op: string, input: object): Promise<T> {
+  const res = await fetch(`${client.baseUrl ?? "https://geocodeai.dev"}/v1/ops/${op}`, {
     method: "POST",
-    headers: { Authorization: `Bearer ${process.env.GEOCODE_API_KEY}`, "Content-Type": "application/json" },
+    headers: { Authorization: `Bearer ${client.apiKey}`, "Content-Type": "application/json" },
     body: JSON.stringify(input),
   });
   if (!res.ok) {
@@ -63,8 +66,11 @@ retrying hot. Retry 5xx once with jitter; never retry 4xx unchanged.
 
 ## CLI in scripts and CI
 
+Sign in once with `npx @meterapp/geocode login`, which saves a key for the
+CLI. In CI, store a key as a secret of the pipeline and pass it with
+`--api-key` (`npx @meterapp/geocode --help` lists the options).
+
 ```bash
-export GEOCODE_API_KEY=geo_…
 npx @meterapp/geocode search "Alameda County" --json | jq '.'
 npx @meterapp/geocode call get_boundary --input '{"id":"r396499"}' > alameda.json
 ```
@@ -88,5 +94,5 @@ personal data in the public text.
 ## MCP from an agent
 
 Streamable HTTP at `/mcp` (header `Authorization: Bearer geo_…`), the OAuth
-variant `/mcp?auth=required` for apps acting for a person, or stdio with
+variant `/mcp/account` for apps acting for a person, or stdio with
 `npx -y @meterapp/geocode mcp`. Tools have the same names as the ops.

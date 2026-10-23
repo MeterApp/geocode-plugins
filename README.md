@@ -34,7 +34,7 @@ codex plugin add geocode@geocode
 ```
 
 **Cursor and others**: point the MCP config at
-`https://geocodeai.dev/mcp?auth=required`, or run
+`https://geocodeai.dev/mcp/account`, or run
 `npx @meterapp/geocode install` to configure Claude Code, Codex and Cursor at once.
 
 ## What is inside

@@ -1,9 +1,9 @@
 {
   "name": "geocode",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Administrative boundaries and areas for any place on Earth: look up a country, state, county, city, district or postcode by name or point and get its polygon, list what is inside it, test points against it, merge several, or describe an area in plain language and get one validated polygon back.",
   "author": {
-    "name": "Meter",
+    "name": "Geocode AI by Meter",
     "email": "jonathan@geocodeai.dev",
     "url": "https://meterapp.co"
   },
@@ -26,7 +26,7 @@
     "displayName": "Geocode AI",
     "shortDescription": "Boundaries and areas as polygons",
     "longDescription": "Look up any administrative boundary in the world by name or coordinate and get its polygon as GeoJSON; browse what is inside a boundary, check which zone each point falls in, merge several boundaries into one shape, or describe an area in plain language (even a clause from a contract) and get one validated polygon back.",
-    "developerName": "Meter",
+    "developerName": "Geocode AI by Meter",
     "category": "Developer Tools",
     "capabilities": [
       "Read",

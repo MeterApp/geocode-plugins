@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.5.4
+
+- `geocode-api` skill: the code samples take the API key as an argument that
+  your app loads from its own secret store, and the CLI signs in with
+  `geocode login` or `--api-key`; the plugin itself never reads a key from your
+  environment.
+- The listing icon is found where the Claude directory looks for it by
+  default, so the manifest no longer names it.
+- Author and marketplace owner read "Geocode AI by Meter".
+- The OAuth MCP URL in the README and skill is `/mcp/account`.
+
 ## 0.5.3
 
 - The MCP server URL is `https://geocodeai.dev/mcp/account`, which always asks
@@ -15,8 +26,8 @@
 
 ## 0.5.1
 
-- Listing icon (`.claude-plugin/icon.png`, 1024×1024, rendered from
-  `assets/logo.svg`) and a terms of service link in the Claude Code manifest.
+- Listing icon (a 1024×1024 PNG rendered from the SVG logo) and a terms of
+  service link in the Claude Code manifest.
 - README: one-step install
   (`/plugin install geocode --marketplace MeterApp/geocode-plugins`) and what
   the plugin sends and fetches.
