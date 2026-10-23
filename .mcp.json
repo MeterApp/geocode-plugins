@@ -2,9 +2,10 @@
   "mcpServers": {
     "geocode": {
       "type": "http",
-      "url": "https://geocodeai.dev/mcp?auth=required",
+      "url": "https://geocodeai.dev/mcp",
       "headers": {
-        "X-Geocode-Integration": "plugin"
+        "X-Geocode-Integration": "plugin",
+        "X-Geocode-Auth": "required"
       }
     }
   }

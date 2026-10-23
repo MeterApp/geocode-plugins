@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.2
+
+- The MCP server URL is plain `https://geocodeai.dev/mcp`; the plugin asks for
+  sign-in with the `X-Geocode-Auth: required` header instead of
+  `?auth=required`, which the Claude directory's scan reads as a credential in
+  the URL. Sign-in works the same way.
+
 ## 0.5.1
 
 - Listing icon (`.claude-plugin/icon.png`, 1024×1024, rendered from
