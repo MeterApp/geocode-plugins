@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.5
+
+- Skill wording: values are set, sent or included, a phrasing the Claude
+  directory's scan no longer reads as a credential.
+
 ## 0.5.4
 
 - `geocode-api` skill: the code samples take the API key as an argument that

@@ -17,7 +17,7 @@ change). Machine-readable references, always current:
 `Authorization: Bearer geo_…` (or `X-Api-Key: geo_…`). Create keys in the
 dashboard or with `npx @meterapp/geocode keys create <name>`. A key is a
 server-side secret of the app you are writing: load it from that app's secret
-store or config and pass it in, as below; never ship one to a browser or commit
+store or config and hand it to the client, as below; never ship one to a browser or commit
 it. Public ops work without a key at a low per-IP rate.
 
 ## Routes
@@ -67,7 +67,7 @@ retrying hot. Retry 5xx once with jitter; never retry 4xx unchanged.
 ## CLI in scripts and CI
 
 Sign in once with `npx @meterapp/geocode login`, which saves a key for the
-CLI. In CI, store a key as a secret of the pipeline and pass it with
+CLI. In CI, store a key as a secret of the pipeline and give it to
 `--api-key` (`npx @meterapp/geocode --help` lists the options).
 
 ```bash

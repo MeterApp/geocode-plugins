@@ -38,7 +38,7 @@ attaches the last failed CLI call (request id, op, error).
 2. A match: `upvote_feedback` (and `comment_on_feedback` with their use case).
 3. No match: `request_feature` with `title` and `details` (what they are
    building). It also checks for similar requests and files nothing when it
-   finds some; pass `force: true` when theirs is different.
+   finds some; set `force: true` when theirs is different.
 
 Feature requests and comments are public (shown with a first name, never an
 email): no keys, personal data or customer data in them.

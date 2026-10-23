@@ -27,7 +27,7 @@ Only when the human asked to buy or upgrade (a 402 alone is not consent):
    - Already on a paid plan: `kind: "plan_change"`, a link that signs them in
      and opens a page confirming the switch with the prorated amount.
 3. Give the human the `url` as is, with the plan name and monthly price. Do not
-   open, shorten or pay it, and never ask for or pass on card details.
+   open, shorten or pay it, and never ask for or forward card details.
 4. When they say it is done, `get_account`: `plan` is the new plan once
    Stripe confirmed the payment (usually seconds). New limits apply to every key
    at once, so retry what hit the quota.

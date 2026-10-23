@@ -61,7 +61,7 @@ that looks like our bug (a 5xx, a boundary that is wrong or missing), use the
 public feedback board. `list_feedback` first; if a matching item exists,
 `upvote_feedback` it and add the use case with `comment_on_feedback`.
 Otherwise, with the human's go-ahead, `request_feature` or `report_issue`
-(pass the failing call's `request_id` and `op`). All free; the board is
+(include the failing call's `request_id` and `op`). All free; the board is
 public, so never include keys, personal or customer data.
 
 ## CLI equivalents

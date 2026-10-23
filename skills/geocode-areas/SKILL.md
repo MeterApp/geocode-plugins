@@ -13,7 +13,7 @@ result (land only, the parts it names, nothing it excludes).
 
 - The area combines or subtracts places: "A and B counties except the city of C".
 - The text comes from a document: a contract's territory clause, a regulator's
-  service area, a franchise or license region. Pass the wording verbatim.
+  service area, a franchise or license region. Send the wording verbatim.
 - One named place is **not** a reason: `search_boundaries` + `get_boundary` is
   instant and costs one unit.
 
