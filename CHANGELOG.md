@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.6
+
+- Links to geocodeai.dev from the manifests carry `?ref=plugin`, so a signup
+  that started from the plugin is attributed to it.
+
 ## 0.5.5
 
 - Skill wording: values are set, sent or included, a phrasing the Claude
