@@ -23,8 +23,16 @@ or add the marketplace first, then install from it:
 /plugin install geocode@geocode
 ```
 
-The first tool call opens your browser to sign in (free). On a machine without
-a browser, paste a `geo_…` key into the plugin's `api_key` option instead.
+Then use any tool: your agent opens a Geocode AI sign-in in the browser (free)
+and keeps the connection. In Claude Code, `/mcp` shows the connection and signs
+in again if needed. Codex, Cursor and the Claude and ChatGPT apps sign in the
+same way from their connector settings.
+
+On a machine without a browser, sign in with `npx @meterapp/geocode login`, or
+add the server yourself with `claude mcp add` and your own key as shown at
+https://geocodeai.dev/docs/mcp#claude. For scripts, CI and code, create an API
+key in the [dashboard](https://geocodeai.dev/dashboard/keys?ref=plugin) and keep
+it as a secret in that environment; the plugin never uses it.
 
 **Codex**
 
@@ -55,7 +63,7 @@ Plus the hosted MCP server (`.mcp.json`), whose tools are the API's ops.
 The plugin has no local code: its skills are instructions, and every tool call
 goes to the hosted MCP server at `https://geocodeai.dev/mcp` over HTTPS. A call
 sends the tool's arguments (place names, boundary ids, coordinates, an area
-description) plus your sign-in token or `geo_…` key, and returns boundary
+description) plus the sign-in token your agent holds, and returns boundary
 metadata, GeoJSON polygons, download links for exports, or account details.
 
 - Boundary lookups are served from Geocode AI's cache of OpenStreetMap and
@@ -68,8 +76,8 @@ metadata, GeoJSON polygons, download links for exports, or account details.
 - Account tools read or change only your own organization (API keys, files,
   feedback); billing tools return Stripe links that a person opens in a browser.
   No tool takes card details or charges a card.
-- An API key, if you set one, is kept in your system's credential store and sent
-  only to the Geocode MCP server in the `X-Api-Key` header.
+- The plugin does no authentication of its own: the host signs you in with
+  your browser and sends its own token to the Geocode MCP server.
 
 Privacy policy: https://geocodeai.dev/privacy · Terms: https://geocodeai.dev/terms
 

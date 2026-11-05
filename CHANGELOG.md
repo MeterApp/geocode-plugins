@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.6.0
+
+- Sign-in is browser only: the host finds Geocode AI's OAuth sign-in on its own
+  and keeps the connection, in Claude Code, Codex, Cursor and the Claude and
+  ChatGPT apps alike. The plugin does no authentication of its own.
+- Claude Code: the optional API key setting is gone and the plugin no longer
+  sends a key header. If you saved a key there, Claude Code ignores it from
+  this version on; the first tool call opens the browser sign-in (or run `/mcp`
+  and choose Authenticate). Your key keeps working for code and CI. On a
+  machine without a browser, run `npx @meterapp/geocode login`, or add the
+  server yourself with `claude mcp add` and your key as shown at
+  https://geocodeai.dev/docs/mcp#claude.
+- The structure check moved out of the plugin into the Geocode AI source
+  repository, so the plugin ships no scripts.
+
 ## 0.5.6
 
 - Links to geocodeai.dev from the manifests carry `?ref=plugin`, so a signup
@@ -12,10 +27,9 @@
 
 ## 0.5.4
 
-- `geocode-api` skill: the code samples take the API key as an argument that
-  your app loads from its own secret store, and the CLI signs in with
-  `geocode login` or `--api-key`; the plugin itself never reads a key from your
-  environment.
+- `geocode-api` skill: the code samples take the API key as an argument from
+  your app's secret store, and the CLI signs in with `geocode login` or
+  `--api-key`.
 - The listing icon is found where the Claude directory looks for it by
   default, so the manifest no longer names it.
 - Author and marketplace owner read "Geocode AI by Meter".
