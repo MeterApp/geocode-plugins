@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.6.1
+
+- The Claude Code manifest names the listing icon again (`icon`). Anthropic's
+  directory reads `icon` from `plugin.json` for the listing and looks nowhere
+  else, so since 0.5.4 the listing had no icon although the file was in the
+  plugin. Claude Code ignores
+  the field; the directory reports it as a field from another tool's manifest,
+  which is informational.
+
 ## 0.6.0
 
 - Sign-in is browser only: the host finds Geocode AI's OAuth sign-in on its own
