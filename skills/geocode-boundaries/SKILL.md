@@ -40,8 +40,9 @@ Searching and browsing (search, children) are free. A polygon, a reverse lookup
 or a point batch costs one unit. Call `get_pricing` for current plans; never
 quote prices from memory. Without a key only public tools work. If a call
 returns `unauthorized`, tell the human to sign in: in Claude Code `/mcp` opens
-the Geocode AI sign-in in the browser; other apps sign in from their connector
-settings. On `quota_exceeded` stop
+the Geocode AI sign-in in the browser; in Codex the human runs
+`codex mcp login geocode` in a terminal and starts a new session; other apps
+sign in from their connector settings. On `quota_exceeded` stop
 and tell the human; never upgrade a plan for them.
 
 ## Presenting results

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.2
+
+- Codex: the install steps now end with `codex mcp login geocode`. Codex does
+  not start the OAuth sign-in by itself; without the login, `codex mcp list`
+  shows the server as "Not logged in" and sessions start without the Geocode AI
+  tools. The boundaries skill tells the agent to ask for that login when a call
+  is unauthorized in Codex.
+
 ## 0.6.1
 
 - The Claude Code manifest names the listing icon again (`icon`). Anthropic's

@@ -25,8 +25,9 @@ or add the marketplace first, then install from it:
 
 Then use any tool: your agent opens a Geocode AI sign-in in the browser (free)
 and keeps the connection. In Claude Code, `/mcp` shows the connection and signs
-in again if needed. Codex, Cursor and the Claude and ChatGPT apps sign in the
-same way from their connector settings.
+in again if needed. In Codex, run `codex mcp login geocode` once after
+installing (see below). Cursor and the Claude and ChatGPT apps sign in from
+their connector settings.
 
 On a machine without a browser, sign in with `npx @meterapp/geocode login`, or
 add the server yourself with `claude mcp add` and your own key as shown at
@@ -39,7 +40,13 @@ it as a secret in that environment; the plugin never uses it.
 ```bash
 codex plugin marketplace add MeterApp/geocode-plugins
 codex plugin add geocode@geocode
+codex mcp login geocode
 ```
+
+Codex does not start the sign-in on its own: until you run
+`codex mcp login geocode`, `codex mcp list` shows the server as "Not logged
+in" and Codex sessions start without the Geocode AI tools. The login opens the
+browser sign-in (free) and Codex keeps the connection.
 
 **Cursor and others**: point the MCP config at
 `https://geocodeai.dev/mcp/account`, or run
