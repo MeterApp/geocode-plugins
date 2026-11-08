@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.3
+
+- The plugin ships only file types the Claude plugin directory accepts: the SVG logo
+  is gone, and Codex and Cursor show the PNG logo instead. No tool, skill or
+  sign-in change.
+
 ## 0.6.2
 
 - Codex: the install steps now end with `codex mcp login geocode`. Codex does

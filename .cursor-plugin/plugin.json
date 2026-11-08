@@ -1,6 +1,6 @@
 {
   "name": "geocode",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Administrative boundaries and areas for any place on Earth: look up a country, state, county, city, district or postcode by name or point and get its polygon, list what is inside it, test points against it, merge several, or describe an area in plain language and get one validated polygon back.",
   "author": {
     "name": "Geocode AI by Meter",
@@ -20,7 +20,7 @@
     "maps",
     "mcp"
   ],
-  "logo": "./assets/logo.svg",
+  "logo": "./.claude-plugin/icon.png",
   "skills": "./skills/",
   "mcpServers": "./.mcp.json"
 }
