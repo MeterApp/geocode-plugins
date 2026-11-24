@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.5
+
+- The description in every manifest now starts with what you get: "The exact boundary of
+  any place on Earth, for your agent". No tool, skill or sign-in change.
+
 ## 0.6.4
 
 - The first suggested prompt is now "Use Geocode AI to show the boundary of Berlin,

@@ -2,11 +2,13 @@
 
 **Website: [geocodeai.dev](https://geocodeai.dev/?ref=plugin)**
 
-Administrative boundaries and areas for Claude Code, Codex, Cursor and any
-agent that reads Agent Skills: look up a country, state, county, city, district
-or postcode by name or point and get its polygon, list what is inside it, test
-points against it, merge several, or describe an area in plain language and get
-one validated polygon back.
+The exact boundary of any place on Earth, for Claude Code, Codex, Cursor and any
+agent that reads Agent Skills. Ask for a country, state, county, city, district
+or postcode by name or point and get its polygon as GeoJSON. List what is inside
+it, test points against it, merge several, or describe an area in plain words
+("the Bay Area counties except San Jose") and get one validated polygon back.
+
+Free to start: searching costs nothing, and the Free plan needs no card.
 
 ## Install
 
