@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "geocode",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Administrative boundaries and areas for any place on Earth: look up a country, state, county, city, district or postcode by name or point and get its polygon, list what is inside it, test points against it, merge several, or describe an area in plain language and get one validated polygon back.",
   "author": {
     "name": "Geocode AI by Meter",
@@ -28,6 +28,11 @@
       "interface": {
         "displayName": "Geocode AI",
         "category": "Developer Tools",
+        "defaultPrompt": [
+          "Use Geocode AI to show the boundary of Berlin, Germany, on a map.",
+          "Which city and county is 37.8, -122.27 in?",
+          "Make one polygon for the Bay Area counties, excluding San Francisco."
+        ],
         "privacyPolicyURL": "https://geocodeai.dev/privacy"
       }
     }

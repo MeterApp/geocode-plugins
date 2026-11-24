@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.4
+
+- The first suggested prompt is now "Use Geocode AI to show the boundary of Berlin,
+  Germany, on a map." (Codex `defaultPrompt` and the portable manifest's OpenAI
+  extension), the same prompt the consent screen, dashboard and emails hand people.
+  No tool, skill or sign-in change.
+
 ## 0.6.3
 
 - The plugin ships only file types the Claude plugin directory accepts: the SVG logo
